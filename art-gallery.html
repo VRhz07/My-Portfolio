@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harv's Art Gallery</title>
+    <link rel="stylesheet" href="/css/art-gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Harv's Portfolio</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="art-gallery.html" class="active">Art Gallery</a></li>
+                <li><a href="projects-gallery.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Art Gallery</h1>
+        <div class="gallery">
+            <div class="art-item">
+                <img src="/assets/img/Art/EZIO.png" alt="Ezio from Assassin's Creed" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Ezio</h3>
+                    <p>My favorite AC Protagonist</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/HISOKA.png" alt="Hisoka 2" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Hisoka</h3>
+                    <p>Hisoka and Chrollo</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/ARKHAM.png" alt="Batman 3" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Arkham Batman</h3>
+                    <p>Batman the GOAT!</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/Claire.png" alt="Claire" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Claire from Claymroe</h3>
+                    <p>She kinda...</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/Sukuna.png" alt="Sukuna" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Sukuna</h3>
+                    <p>Malevolent Kitchen!</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/EREN.jpg" alt="Eren" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Eren</h3>
+                    <p>TATAKAE!</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/Rengoku.jpg" alt="Rengoku" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Rengoku</h3>
+                    <p>RIP T_T</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/GUTS.jpg" alt="Guts" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Guts</h3>
+                    <p>Griffith!!!!</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/SABER.jpg" alt="Saber" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Arthuria Pendragon</h3>
+                    <p>Excalibur!!!</p>
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="/assets/img/Art/Gilgamesh.jpg" alt="Gilgamesh" class="fullscreen-img">
+                <div class="overlay">
+                    <h3>Gilgamesh</h3>
+                    <p>King of Heroes</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Harv's Portfolio. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Haesias"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/VRhz07"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <div id="fullscreen-container" class="fullscreen-container">
+        <img id="fullscreen-image" src="/placeholder.svg" alt="Fullscreen Image">
+        <div id="fullscreen-caption"></div>
+        <button id="close-fullscreen">&times;</button>
+    </div>
+
+    <script src="gallery-script.js">console.log("Images found:", images.length);
+    </script>
+</body>
+</html>
+

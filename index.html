@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer's Portfolio Harvz</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
+
+</head>
+<body>
+
+    <!--Home Start-->
+    <div id="header" >
+        <div class="container">
+            <nav>
+              <img src="./assets/img/logoo.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a>  </li>
+                    <li> <a href="#about">About</a>  </li>
+                    <li> <a href="#portfolio">Works</a>  </li>
+                    <li> <a href="#contact">Contact</a>  </li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <p>IT Student.</p>
+                <h1>Hi, I'm <span>Harvey</span> <br>Verian from the Philippines</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <canvas id="snowCanvas"></canvas>
+
+
+    <!--About Start-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="./assets/img/harvz2 (1).jpg">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="desciption">Greetings! I'm Harvey Verian, a 20-year-old tech enthusiast currently immersed in the world of programming languages and web development.
+                        I'm also currently interested in Drawing, Photography, Web development, and some Hardware and Software troubleshooting. </p>
+            
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Tech Stack</p>
+                            <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                            <p class="tab-links" onclick="opentab('education')" >Education</p>
+                            <p class="tab-links" onclick="opentab('hobbies')" >Hobbies</p>
+                            
+    
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>HTML
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner" style="width: 70%;"></div>
+                                    </div>
+                                </li>
+                                <li>CSS
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner" style="width: 60%;"></div>
+                                    </div>
+                                </li>
+                                <li>SQL
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner" style="width: 15%;"></div>
+                                    </div>
+                                </li>
+                                <li>JAVA
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner" style="width: 10%;"></div>
+                                    </div>
+                                </li>
+
+                                <li>Python-Django
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner" style="width: 20%;"></div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                         </div>
+
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021-2021</span>  <br><b>IMMERSION (80 HOURS)</b>- South East Asia Institute of Trade and Technology at Las Piñas</li>
+                                <li><span>2022-2023</span>  <br> <b>SPES ENCODER</b> -Golden Acres Health Centre at Las Piñas</li>
+                                
+                               
+                            </ul>
+                         </div>
+
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016-2019</span> <br> Bacoor National High School</li>
+                                <li><span>2020-2022</span> <br> SHS in San Nicholas III, Bacoor City</li>
+                                <li><span>2022-2024</span> <br> Cavite State University, Bacoor Campus</li>
+                            </ul>
+                         </div>
+
+                         <div class="tab-contents" id="hobbies">
+                            <ul>
+                                <li><span>Reading</span> <br> I'm a big fan of fantasy novels—I love getting lost in magical worlds, epic adventures, and unforgettable characters. </li>
+                                <li><span>Workingout</span> <br> I practice calisthenics because it’s a cost-effective way to stay fit, especially since I don’t have a gym membership yet. Plus, I enjoy the challenge of using just my body weight to build strength.</li>
+                                <li><span>Watching</span> <br> I enjoy watching movies and TV series, especially since it’s a big part of how my family bonds and spends time together. </li>
+                                <li><span>Gaming</span> <br> I also love playing games, especially single-player experiences. I'm a big fan of FPS, Metroidvania and RPG games, particularly those with a dark fantasy theme—games like Dark Souls really draw me in with their
+                                     immersive worlds and challenging gameplay.</li>
+                            </ul>
+                         </div>
+
+    
+
+                         
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------Portfolio------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+            <div class="work">
+                <img src="./assets/img/Art/EZIO.png">
+                <div class="layer">
+                    <h3>Art Gallery</h3>
+                    <p>Take a look in some of my Arts </p>
+                    <a href="/art-gallery.html"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    
+            
+                </div>
+            </div>
+            <div class="work">
+                <img src="./assets/img/projects screenshots/SNAKE GAME JAVA.png">
+                <div class="layer">
+                    <h3>Past Projects</h3>
+                    <p>Here's my past Projects</p>
+                    <a href="/projects-gallery.html"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./assets/img/Photography/Dusty1.png">
+                <div class="layer">
+                    <h3>Photography</h3>
+                    <p>Here are some of my captures</p>
+                    <a href="/photography.html"> <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------Contact---------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> harvzz454@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i> 09485034766</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Haesias"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com/dashboard"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------footer------------->
+
+<footer>
+    <p>&copy; 2022 Harv's Portfolio. All rights reserved.</p>
+</footer>
+    <!--script para sa about, pag ni-click yung mga tab content lalabas ito at i hide 
+    nya yung d naka select-->  
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <!----------------script para maging responsive ang nav bar-------------->
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+    </script>
+
+    <script src="snow.js"></script>
+    
+
+</body>
+</html>
