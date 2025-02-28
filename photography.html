@@ -11,7 +11,10 @@
     <header>
         <nav>
             <a href="index.html" class="logo">Harv's Portfolio</a>
-            <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="art-gallery.html">Art Gallery</a></li>
                 <li><a href="projects-gallery.html">Projects</a></li>
@@ -135,11 +138,7 @@
         </div>
     </footer>
 
-    <div id="fullscreen-container" class="fullscreen-container">
-        <img id="fullscreen-image" src="/placeholder.svg" alt="Fullscreen Image">
-        <div id="fullscreen-caption"></div>
-        <button id="close-fullscreen">&times;</button>
-    </div>
+    <script src="burger.js"></script>
 
 </body>
 </html>

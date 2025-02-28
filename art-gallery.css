@@ -37,6 +37,7 @@ header {
   color: #fff;
   padding: 1rem 0;
   border-bottom: 1px solid #333;
+  position: relative;
 }
 
 nav {
@@ -53,25 +54,33 @@ nav {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  z-index: 20;
 }
 
-nav ul {
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 20;
+}
+
+.nav-menu {
   display: flex;
   list-style: none;
 }
 
-nav ul li {
+.nav-menu li {
   margin-left: 20px;
 }
 
-nav ul li a {
+.nav-menu li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.nav-menu li a:hover,
+.nav-menu li a.active {
   color: #3081d0;
 }
 
@@ -92,8 +101,8 @@ h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .art-item {
@@ -106,7 +115,7 @@ h1 {
 
 .art-item img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -129,7 +138,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 1.5rem;
   pointer-events: none;
 }
 
@@ -179,5 +188,90 @@ footer {
 
 .social-icons a:hover {
   color: #3081d0;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .art-item img {
+    height: 450px;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .overlay h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .art-item img {
+    height: 350px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #fullscreen-image {
+    max-height: 70vh;
+  }
+
+  #fullscreen-caption {
+    font-size: 1rem;
+  }
 }
 
