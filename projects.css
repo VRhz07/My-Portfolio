@@ -1,250 +1,434 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("./assets/img/darksky.jpg") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  z-index: 20;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 20;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #3081d0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projects-section {
+  margin-bottom: 5rem;
+}
+
+.landscape-section {
+  margin-bottom: 5rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #2a2a2a;
+  aspect-ratio: 16 / 10;
+  cursor: pointer;
+  min-height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:active {
+  transform: scale(0.98);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-item:hover img,
+.photo-item.active img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 150px;
+}
+
+/* Show caption on hover OR when active class is present */
+.photo-item:hover .caption,
+.photo-item.active .caption {
+  transform: translateY(0);
+}
+
+.caption h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.caption p {
+  color: #ccc;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Add styles for the source code button */
+.source-code-btn {
+  display: inline-block;
+  background-color: #3081d0;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.source-code-btn i {
+  margin-right: 5px;
+}
+
+.source-code-btn:hover {
+  background-color: #2371c0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3081d0;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url("./assets/img/darksky.jpg") no-repeat center center fixed;
-    background-size: cover;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    position: relative;
-  }
-  
-  body::before {
-    content: "";
+
+  .nav-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-    filter: blur(8px);
-    z-index: -1;
-  }
-  
-  header {
-    background-color: black;
-    color: #fff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #333;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    transition: right 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .photo-item {
+    min-height: 220px;
+  }
+
+  .caption {
+    padding: 1rem;
+  }
+
+  .caption h3 {
+    font-size: 1.2rem;
+  }
+
+  .caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
   }
   
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    z-index: 20;
+    font-size: 1.2rem;
   }
-  
-  .menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    z-index: 20;
-  }
-  
-  .nav-menu {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-menu li {
-    margin-left: 20px;
-  }
-  
-  .nav-menu li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu li a:hover,
-  .nav-menu li a.active {
-    color: #3081d0;
-  }
-  
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 20px;
-  }
-  
+
   h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #fff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .projects-section {
-    margin-bottom: 4rem;
+  .photo-item {
+    min-height: 200px;
+  }
+  
+  .caption {
+    min-height: 130px;
+    padding: 1rem;
+  }
+  
+  .caption h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .caption p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .source-code-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop specific layout - limit to 2 columns with more width */
+@media (min-width: 1200px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+  
+  .photo-item {
+    min-height: 300px;
+  }
+}
+
+/* Larger desktop view */
+@media (min-width: 1600px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1600px;
+  }
+}
+
+/* High-resolution phones (portrait) */
+@media screen and (min-width: 481px) and (max-width: 896px) {
+  html {
+    font-size: 15px;
   }
   
   .photo-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
   
   .photo-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background-color: #2a2a2a;
-    aspect-ratio: 16 / 9;
-  }
-  
-  .photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  
-  .photo-item:hover img {
-    transform: scale(1.05);
+    min-height: 230px;
   }
   
   .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
-    padding: 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-  }
-  
-  .photo-item:hover .caption {
-    transform: translateY(0);
+    min-height: 140px;
+    padding: 1.25rem;
   }
   
   .caption h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
   }
   
   .caption p {
-    color: #ccc;
-    font-size: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 0.95rem;
+  }
+}
+
+/* High-resolution phones (landscape) */
+@media screen and (min-width: 897px) and (max-width: 1199px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 90%;
   }
   
-  footer {
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    border-top: 1px solid #333;
+  .photo-item {
+    min-height: 240px;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .photo-item img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Tall phone screens (high aspect ratio) */
+@media screen and (max-width: 480px) and (min-aspect-ratio: 2/3) {
+  .photo-item {
+    aspect-ratio: 16 / 9;
+    min-height: 180px;
+  }
+}
+
+/* Touch optimizations */
+@media (hover: none) {
+  /* Remove the partial visibility for touch devices */
+  .caption {
+    transform: translateY(100%);
   }
   
-  .social-icons {
-    margin-top: 1rem;
+  .caption h3 {
+    margin-bottom: 0.2rem;
   }
   
-  .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+  .photo-item:hover .caption, 
+  .photo-item.active .caption,
+  .photo-item:active .caption {
+    transform: translateY(0);
   }
   
-  .social-icons a:hover {
-    color: #3081d0;
+  .source-code-btn {
+    padding: 10px 16px;
+    margin-top: 8px;
   }
-  
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.95);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: right 0.3s ease;
-      z-index: 10;
-    }
-  
-    .nav-menu.active {
-      right: 0;
-    }
-  
-    .nav-menu li {
-      margin: 1.5rem 0;
-    }
-  
-    .nav-menu li a {
-      font-size: 1.2rem;
-    }
-  
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-  
-    .photo-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  
-    .caption {
-      padding: 1rem;
-    }
-  
-    .caption h3 {
-      font-size: 1.2rem;
-    }
-  
-    .caption p {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 1.2rem;
-    }
-  
-    h1 {
-      font-size: 1.8rem;
-    }
-  }
-  
-  
+}

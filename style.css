@@ -231,6 +231,10 @@ nav ul li a:hover::after {
     margin: 0 auto;
 }
 
+.work:active {
+    transform: scale(0.98);
+}
+
 .work img {
     width: 100%;
     height: 100%;
@@ -1000,6 +1004,37 @@ footer {
        }
 
 }
+
+/* Modern desktop view */
+/* @media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .work-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+} */
+
+/* High DPI screens */
+/* @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .work img, .about-col1 img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+} */
+
+/* Touch optimizations */
+/* @media (hover: none) {
+    .work:hover .layer {
+        height: 100%;
+    }
+    
+    .work:active .layer {
+        height: 100%;
+    }
+} */
 
 
 
