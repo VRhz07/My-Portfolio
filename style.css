@@ -12,6 +12,7 @@ html {
 body {
     background-color: #080808;
     color: white;
+    overflow-x: hidden;
 }
 
 /*-----------Home--------------*/
