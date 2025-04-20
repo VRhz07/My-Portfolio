@@ -58,6 +58,7 @@ nav {
 
 .logo {
     width: 150px;
+    margin-left: -20px;
 }
 
 nav ul li {
