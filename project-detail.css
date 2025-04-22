@@ -4,6 +4,7 @@
     margin: 2rem auto;
     padding: 0 20px;
     color: #fff;
+    flex: 1 0 auto;
 }
 
 .back-link {
@@ -178,4 +179,10 @@
     .project-info h2 {
         font-size: 1.5rem;
     }
+}
+
+/* Footer styles for consistency - these will override any conflicting styles from projects.css */
+footer {
+    width: 100%;
+    flex-shrink: 0;
 } 
