@@ -130,26 +130,21 @@
     margin-top: 2rem;
 }
 
-.demo-btn {
+.source-code-btn-2 {
     display: inline-block;
-    background-color: #4caf50;
+    background-color: #3081d0;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
+    margin-top: 10px;
     transition: all 0.3s ease;
-    font-size: 1rem;
-}
+    font-size: 0.9rem;
+    height: 40px;
+    
+  }
 
-.demo-btn i {
-    margin-right: 8px;
-}
 
-.demo-btn:hover {
-    background-color: #3d9c40;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
