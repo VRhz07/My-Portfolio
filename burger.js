@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
     menuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("active")
+      // Toggle body class for overflow control
+      document.body.classList.toggle("menu-open")
+      
       // Toggle between hamburger and X icon
       const icon = menuToggle.querySelector("i")
       if (icon.classList.contains("fa-bars")) {
@@ -20,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (event) => {
       if (!event.target.closest("nav") && navMenu.classList.contains("active")) {
         navMenu.classList.remove("active")
+        // Remove menu-open class from body
+        document.body.classList.remove("menu-open")
+        
         const icon = menuToggle.querySelector("i")
         icon.classList.remove("fa-times")
         icon.classList.add("fa-bars")
