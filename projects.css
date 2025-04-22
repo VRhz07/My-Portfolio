@@ -208,6 +208,37 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Project buttons container */
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Details button styling */
+.details-btn {
+  display: inline-block;
+  background-color: #f07b3f;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.details-btn i {
+  margin-right: 5px;
+}
+
+.details-btn:hover {
+  background-color: #e06a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 footer {
   background-color: black;
   color: #fff;

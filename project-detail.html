@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Harv's Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Harv's Portfolio</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="art-gallery.html">Art Gallery</a></li>
+                <li><a href="projects-gallery.html" class="active">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-container">
+        <div class="back-link">
+            <a href="projects-gallery.html"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+        
+        <div class="project-header">
+            <h1 id="project-title">Project Title</h1>
+            <div class="project-meta">
+                <span id="project-year" class="meta-tag">Year: 2023</span>
+                <span id="project-type" class="meta-tag">Type: Solo Project</span>
+                <span id="project-tech" class="meta-tag">Tech: HTML, CSS, JS</span>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-image">
+                <img id="project-img" src="./assets/img/projects screenshots/placeholder.png" alt="Project Screenshot">
+            </div>
+            
+            <div class="project-info">
+                <h2>Project Overview</h2>
+                <p id="project-description">
+                    Detailed description of the project will be displayed here. This will include the purpose of the project,
+                    the problem it solves, and the approach taken to implement it.
+                </p>
+                
+                <h2>Technologies Used</h2>
+                <ul id="tech-list" class="tech-stack">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Additional technologies will be listed here</li>
+                </ul>
+                
+                <h2>Key Features</h2>
+                <ul id="features-list" class="features">
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                    <li>More features will be listed here</li>
+                </ul>
+                
+                <h2>Challenges & Solutions</h2>
+                <p id="challenges">
+                    This section will describe the challenges faced during the development process
+                    and how they were addressed.
+                </p>
+                
+                <div class="project-links">
+                    <a id="github-link" href="#" class="source-code-btn" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a id="live-demo" href="#" class="demo-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Harv's Portfolio. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Haesias"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/VRhz07"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="burger.js"></script>
+    <script src="project-detail.js"></script>
+</body>
+</html> 

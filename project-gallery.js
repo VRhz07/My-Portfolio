@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Add click event listener to each project item
     projectItems.forEach((item) => {
-      item.addEventListener("click", function () {
+      item.addEventListener("click", function (event) {
+        // Don't toggle active state if clicking on buttons
+        if (event.target.closest('.source-code-btn') || event.target.closest('.details-btn')) {
+          return;
+        }
+  
         // Toggle active class on the clicked item
         this.classList.toggle("active")
   
